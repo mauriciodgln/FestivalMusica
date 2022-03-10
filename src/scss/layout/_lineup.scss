@@ -1,0 +1,88 @@
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup {
+  background-color: v.$rosa;
+  padding: 5rem 0;
+
+  h3, p {
+    color: v.$blanco;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  .dia {
+    margin: 3rem 0;
+    font-size: 1.8rem
+  }
+}
+
+.contenedor-escenarios {
+  @include m.grid(1, 2rem);
+
+  @include m.phone {
+    @include m.grid(2, 5rem);
+  }
+}
+
+.escenario {
+  padding: 2rem 0;
+
+  p {
+    color: v.$negro;
+  }
+
+  .nombre-escenario {
+    &::after{
+      content: '';
+      display: block;
+      width: 20rem;
+      height: 10rem;
+      background-size: 15rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0 auto;
+    }
+  }
+}
+
+.rock .nombre-escenario::after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.edm .nombre-escenario::after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.calendario-bandas {
+  list-style: none;
+
+  li {
+    padding: 1.5rem;
+    font-weight: bold;
+
+    span {
+      font-weight: normal;
+    }
+  }
+}
+
+.bg-amarillo {
+  background-color: v.$amarillo;
+
+  li:nth-child(odd) {
+    background-color: darken(v.$amarillo, 20%);
+  }
+}
+
+.bg-verde {
+  background-color: v.$verde;
+
+  li:nth-child(odd) {
+    background-color: darken(v.$verde, 10%);
+  }
+}

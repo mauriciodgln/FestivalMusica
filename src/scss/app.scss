@@ -1,0 +1,9 @@
+
+// @import 'base/variables'; // Forma anterior
+// @import 'contenido/contenido'; // Forma anterior
+// '@import' permitía que las variables fueran globales y pudieran usarse sin problema desde otros archivos
+
+
+@use 'base';
+@use 'layout';
+

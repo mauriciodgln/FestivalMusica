@@ -1,0 +1,28 @@
+
+@use 'variables' as v;
+
+// Mixins para Media Queries
+
+@mixin phone {
+  @media (min-width: v.$phone) {
+   @content; // Permite escribir más de una línea de código al usar el mixin 
+  }
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet) {
+   @content; // Permite escribir más de una línea de código al usar el mixin 
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop) {
+   @content; // Permite escribir más de una línea de código al usar el mixin 
+  }
+}
+
+@mixin grid($columnas, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}

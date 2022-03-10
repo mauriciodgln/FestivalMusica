@@ -1,0 +1,1 @@
+instalar dependecias de desarrollo y node modules: npm i
